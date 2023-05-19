@@ -6,6 +6,7 @@ public class ATM_machine {
         String cardNo = "200020104110";
         String pinNo = "1234";
         int cardCount = 0;
+        int pinCount = 0;
 
         Scanner input = new Scanner(System.in);
 
@@ -34,6 +35,11 @@ public class ATM_machine {
 
             else {
                 System.out.println("Please Choose your option!");
+
+                printf("\n\t\t\t\t 1.Widraw money");
+                printf("\n\t\t\t\t 2.Check your blance");
+                printf("\n\t\t\t\t 3.deposit Money");
+                printf("\n\n\t\t\t\tPlese seclect the option  : ");
             }
         }
 

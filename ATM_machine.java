@@ -34,18 +34,44 @@ public class ATM_machine {
             }
 
             else {
+
                 System.out.println("Please Choose your option!");
 
-                printf("\n\t\t\t\t 1.Widraw money");
-                printf("\n\t\t\t\t 2.Check your blance");
-                printf("\n\t\t\t\t 3.deposit Money");
-                printf("\n\n\t\t\t\tPlese seclect the option  : ");
+                System.out.println("\n\t\t\t\t (1) Check your Balance");
+                System.out.println("\n\t\t\t\t (2) Withdraw your Money");
+                System.out.println("\n\t\t\t\t (3) Deposit your Money");
+                System.out.println("\n\t\t\t\t (4) Cancel");
+                int choice = input.nextInt();
+
+                switch (choice) {
+
+                    case 1:
+                    Balance();
+
+                    case 2:
+                    Withdraw();
+
+                    case 3:
+                    Deposit();
+
+                    case 4:
+                    exit();
+                    main(args);
+
+                }
+                
             }
         }
 
 
 
     }
+
+    public void balance() {}
+
+    public void withdraw() {}
+
+    public void Deposit() {}
 
     
 }

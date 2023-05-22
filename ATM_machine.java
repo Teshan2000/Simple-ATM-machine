@@ -7,6 +7,7 @@ public class ATM_machine {
         String pinNo = "1234";
         int cardCount = 0;
         int pinCount = 0;
+        //double balance = 5000.00;
 
         Scanner input = new Scanner(System.in);
 
@@ -55,7 +56,7 @@ public class ATM_machine {
                     Deposit();
 
                     case 4:
-                    exit();
+                    //exit();
                     main(args);
 
                 }
@@ -67,11 +68,29 @@ public class ATM_machine {
 
     }
 
-    public void balance() {}
+    static void Balance() {
+        System.out.println("Your Balance is Rs.5000.00");
+    }
 
-    public void withdraw() {}
+    static void Withdraw() {
+        double balance = 5000.00;
+        Scanner amount = new Scanner(System.in);
+        System.out.println("Please Enter your amount of Withdrawing");
+        double withdrawl = amount.nextDouble();
+        if (withdrawl >= balance) {
+            System.out.println("Insufficient Balance!");
+            System.out.println("Try Again!");
+        }
+        else {
+            System.out.println("Your Withdrawn Money is " + withdrawl);
+            double newBalance = balance - withdrawl;
+            System.out.println("Your New Balance is " + newBalance);
 
-    public void Deposit() {}
+        }
+
+    }
+
+    static void Deposit() {}
 
     
 }

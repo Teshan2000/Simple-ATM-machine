@@ -48,18 +48,25 @@ public class ATM_machine {
 
                     case 1:
                     Balance();
+                    break;
 
                     case 2:
                     Withdraw();
+                    break;
 
                     case 3:
                     Deposit();
+                    break;
 
                     case 4:
                     //exit();
                     main(args);
 
                 }
+
+                System.out.println("Do You want another Transaction?");
+                System.out.println("\n\t\t\t\t (1)Yes");
+                System.out.println("\n\t\t\t\t (2)No");
                 
             }
         }
@@ -95,13 +102,13 @@ public class ATM_machine {
         Scanner amount = new Scanner(System.in);
         System.out.println("Please Enter your amount of Depositing");
         double diposit = amount.nextDouble();
-        if (withdrawl >= balance) {
+        if (diposit >= balance) {
             System.out.println("Insufficient Balance!");
             System.out.println("Try Again!");
         }
         else {
             System.out.println("Your Depositted Money is " + diposit);
-            double newBalance = balance - diposit;
+            double newBalance = balance + diposit;
             System.out.println("Your New Balance is " + newBalance);
 
         }

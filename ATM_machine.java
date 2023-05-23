@@ -90,7 +90,23 @@ public class ATM_machine {
 
     }
 
-    static void Deposit() {}
+    static void Deposit() {
+        double balance = 5000.00;
+        Scanner amount = new Scanner(System.in);
+        System.out.println("Please Enter your amount of Depositing");
+        double diposit = amount.nextDouble();
+        if (withdrawl >= balance) {
+            System.out.println("Insufficient Balance!");
+            System.out.println("Try Again!");
+        }
+        else {
+            System.out.println("Your Depositted Money is " + diposit);
+            double newBalance = balance - diposit;
+            System.out.println("Your New Balance is " + newBalance);
+
+        }
+
+    }
 
     
 }

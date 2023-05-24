@@ -36,38 +36,47 @@ public class ATM_machine {
 
             else {
 
-                System.out.println("Please Choose your option!");
-
-                System.out.println("\n\t\t\t\t (1) Check your Balance");
-                System.out.println("\n\t\t\t\t (2) Withdraw your Money");
-                System.out.println("\n\t\t\t\t (3) Deposit your Money");
-                System.out.println("\n\t\t\t\t (4) Cancel");
-                int choice = input.nextInt();
-
-                switch (choice) {
-
-                    case 1:
-                    Balance();
-                    break;
-
-                    case 2:
-                    Withdraw();
-                    break;
-
-                    case 3:
-                    Deposit();
-                    break;
-
-                    case 4:
-                    //exit();
-                    main(args);
-
-                }
-
-                System.out.println("Do You want another Transaction?");
+                System.out.println("Do You want to continue Transaction?");
                 System.out.println("\n\t\t\t\t (1)Yes");
                 System.out.println("\n\t\t\t\t (2)No");
-                
+                int continueTransaction = input.nextInt();     
+
+                if (continueTransaction==1) {
+
+                    System.out.println("Please Choose your option!");
+
+                    System.out.println("\n\t\t\t\t (1) Check your Balance");
+                    System.out.println("\n\t\t\t\t (2) Withdraw your Money");
+                    System.out.println("\n\t\t\t\t (3) Deposit your Money");
+                    System.out.println("\n\t\t\t\t (4) Cancel");
+                    int choice = input.nextInt();
+
+                    switch (choice) {
+
+                        case 1:
+                        Balance();
+                        break;
+
+                        case 2:
+                        Withdraw();
+                        break;
+
+                        case 3:
+                        Deposit();
+                        break;
+
+                        case 4:
+                        //exit();
+                        main(args);
+
+                    }                
+                }
+
+                if (continueTransaction==2) {
+
+                    System.exit(continueTransaction);
+                }  
+
             }
         }
 

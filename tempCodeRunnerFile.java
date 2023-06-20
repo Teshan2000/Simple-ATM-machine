@@ -13,21 +13,19 @@ public class ATM_machine {
 
         while (cardCount<3) {
 
-            System.out.println("------------------------------------------------");
-            System.out.println("|          Welcome to the ATM Machine!          |");
-            System.out.println("------------------------------------------------\n");
+            System.out.println("Welcome to the ATM Machine!");
 
             System.out.println("Please Enter your Card Number:");
             String enteredCardNo = input.nextLine();
 
             if (!enteredCardNo.equals(cardNo)) {
-                System.out.println("Invalid Card Number!\n");
-                System.out.println("Please Enter Again!\n");
+                System.out.println("Invalid Card Number!");
+                System.out.println("Please Enter Again!");
                 cardCount++;
 
                 if (cardCount==3) {
-                    System.out.println("You entered your Card Number 3 Times!\n");
-                    System.out.println("Please Enter your Card Number Again!\n");   
+                    System.out.println("You entered your Card Number 3 Times!");
+                    System.out.println("Please Enter your Card Number Again!");   
                     main(args);  
                 }  
             } 
@@ -41,34 +39,32 @@ public class ATM_machine {
 
                     if (!enteredPinNo.equals(pinNo)) {                
 
-                        System.out.println("Invalid Pin Number!\n");
-                        System.out.println("Please Enter Again!\n");
+                        System.out.println("Invalid Pin Number!");
+                        System.out.println("Please Enter Again!");
                         pinCount++;
 
                         if (pinCount==3) {
-                            System.out.println("You entered your Pin Number 3 Times!\n");
-                            System.out.println("Please Enter your pin Number Again!\n");   
+                            System.out.println("You entered your Pin Number 3 Times!");
+                            System.out.println("Please Enter your pin Number Again!");   
                             main(args);  
                         }
                     }
 
                     else {
 
-                         System.out.println("------------------------------------------------");
-                        System.out.println("\tDo You want to continue Transaction?\n");
-                        System.out.println(" (1)Yes");
-                        System.out.println(" (2)No");
+                        System.out.println("Do You want to continue Transaction?");
+                        System.out.println("\n\t\t\t\t (1)Yes");
+                        System.out.println("\n\t\t\t\t (2)No");
                         int continueTransaction = input.nextInt();     
 
                         if (continueTransaction==1) {
 
-                             System.out.println("------------------------------------------------");
-                            System.out.println("\tPlease Choose your option!\n");
+                            System.out.println("Please Choose your option!");
 
-                            System.out.println(" (1) Check your Balance");
-                            System.out.println(" (2) Withdraw your Money");
-                            System.out.println(" (3) Deposit your Money");
-                            System.out.println(" (4) Cancel");
+                            System.out.println("\n\t\t\t\t (1) Check your Balance");
+                            System.out.println("\n\t\t\t\t (2) Withdraw your Money");
+                            System.out.println("\n\t\t\t\t (3) Deposit your Money");
+                            System.out.println("\n\t\t\t\t (4) Cancel");
                             int choice = input.nextInt();
 
                             switch (choice) {
@@ -87,59 +83,64 @@ public class ATM_machine {
 
                                 case 4:
                                 main(args);
+
                             }                
                         }
 
                         if (continueTransaction==2) {
+
                             System.exit(continueTransaction);
                         }  
-                    }                
+
+                    }
+
+                
                 }
             }
         }
 
+
     }
 
     static void Balance() {
-        System.out.println("------------------------------------------------");
-        System.out.println("\tYour Balance is Rs.5000.00\n\n");
-        System.out.println("------------------------------------------------");
+        System.out.println("Your Balance is Rs.5000.00");
     }
 
     static void Withdraw() {
         double balance = 5000.00;
         Scanner amount = new Scanner(System.in);
-        System.out.println("------------------------------------------------");
-        System.out.println("Please Enter your amount of Withdrawing\n");
+        System.out.println("Please Enter your amount of Withdrawing");
         double withdrawl = amount.nextDouble();
         if (withdrawl >= balance) {
-            System.out.println("Insufficient Balance!\n");
-            System.out.println("Try Again!\n");
+            System.out.println("Insufficient Balance!");
+            System.out.println("Try Again!");
         }
         else {
-            System.out.println("------------------------------------------------");
             System.out.println("Your Withdrawn Money is " + withdrawl);
             double newBalance = balance - withdrawl;
-            System.out.println("\nYour New Balance is " + newBalance);
+            System.out.println("Your New Balance is " + newBalance);
+
         }
+
     }
 
     static void Deposit() {
         double balance = 5000.00;
         Scanner amount = new Scanner(System.in);
-        System.out.println("------------------------------------------------");
-        System.out.println("Please Enter your amount of Depositing\n");
+        System.out.println("Please Enter your amount of Depositing");
         double diposit = amount.nextDouble();
         if (diposit >= balance) {
-            System.out.println("Insufficient Balance!\n");
-            System.out.println("Try Again!\n");
+            System.out.println("Insufficient Balance!");
+            System.out.println("Try Again!");
         }
         else {
-            System.out.println("------------------------------------------------");
             System.out.println("Your Depositted Money is " + diposit);
             double newBalance = balance + diposit;
-            System.out.println("\nYour New Balance is " + newBalance);
+            System.out.println("Your New Balance is " + newBalance);
+
         }
+
     }
+
     
 }

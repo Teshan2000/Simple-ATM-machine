@@ -7,7 +7,6 @@ public class ATM_machine {
         String pinNo = "1234";
         int cardCount = 0;
         int pinCount = 0;
-        //double balance = 5000.00;
 
         Scanner input = new Scanner(System.in);
 
@@ -54,7 +53,7 @@ public class ATM_machine {
 
                     else {
 
-                         System.out.println("------------------------------------------------");
+                        System.out.println("------------------------------------------------");
                         System.out.println("\tDo You want to continue Transaction?\n");
                         System.out.println(" (1)Yes");
                         System.out.println(" (2)No");
@@ -62,7 +61,7 @@ public class ATM_machine {
 
                         if (continueTransaction==1) {
 
-                             System.out.println("------------------------------------------------");
+                            System.out.println("------------------------------------------------");
                             System.out.println("\tPlease Choose your option!\n");
 
                             System.out.println(" (1) Check your Balance");
@@ -102,7 +101,7 @@ public class ATM_machine {
 
     static void Balance() {
         System.out.println("------------------------------------------------");
-        System.out.println("\tYour Balance is Rs.5000.00\n\n");
+        System.out.println("\tYour Balance is Rs.5000.00");
         System.out.println("------------------------------------------------");
     }
 
@@ -118,9 +117,10 @@ public class ATM_machine {
         }
         else {
             System.out.println("------------------------------------------------");
-            System.out.println("Your Withdrawn Money is " + withdrawl);
+            System.out.println("Your Withdrawn Money: " + withdrawl);
             double newBalance = balance - withdrawl;
-            System.out.println("\nYour New Balance is " + newBalance);
+            System.out.println("\nYour New Balance: " + newBalance);
+            System.out.println("------------------------------------------------");
         }
     }
 
@@ -136,9 +136,10 @@ public class ATM_machine {
         }
         else {
             System.out.println("------------------------------------------------");
-            System.out.println("Your Depositted Money is " + diposit);
+            System.out.println("Your Depositted Money: " + diposit);
             double newBalance = balance + diposit;
-            System.out.println("\nYour New Balance is " + newBalance);
+            System.out.println("\nYour New Balance: " + newBalance);
+            System.out.println("------------------------------------------------");
         }
     }
     
